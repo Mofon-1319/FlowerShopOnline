@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+button {
+    padding: 2px;
+}
+
+.question {
+    height: 20px;
+    width: 20px;
+    margin-top: 170px;
+}
+
+.question1 {
+    height: 20px;
+    width: 20px;
+    margin-top: 215px;
+}
+
+#submit {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.column {
+    background-color: white;
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+
+.side {
+    background-color: white;
+    backface-visibility: hidden;
+    float: left;
+    width: 65%;
+    padding: 10px;
+}
+
+.side2 {
+    float: left;
+    width: 5%;
+    padding: 10px;
+}
+
+label {
+    padding-top: 0.7em;
+    padding-bottom: 1em;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input, select {
+    border-color: aqua;
+}
+
+#submit {
+    border-color: white;
+    background-color: white;
+}
+
+.content {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 5px;
+    border: solid;
+}
+
+.nav_menu {
+    padding: 15px;
+    text-align: center;
+    background-color: #99cc00;
+    margin-top: 20px;
+}
+
+.footer {
+    padding: 3px;
+    text-align: center;
+    background-color: #99cc00;
+}
+
+.content_column {
+    background-color: white;
+    float: left;
+    width: 35%;
+    padding:10px;
+}
+
+.content_side {
+    background-color: white;
+    float: left;
+    width: 35%;
+    padding:10px;
+}
+.image_side{
+    background-color: white;
+    float: left;
+    width: 30%;
+    padding:10px;
+}
+
+.form_side {
+    background-color: #fccc9e;
+    float: left;
+    width: 65%;
+    padding: 10px;
+}
+
+.form_column {
+    background-color: #fccc9e;
+    float: left;
+    width: 35%;
+    padding: 10px;
+}

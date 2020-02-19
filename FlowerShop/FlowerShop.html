@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles/Style.css" />
+    <script type="text/javascript" src="scripts/Script.js"></script>
+</head>
+<body>
+    <form id="form1" style="line-height: 30px">
+        <div class="content">
+            <div class="header">
+                <h2 style="color: #0c4686">FLOWER SHOP ONLINE</h2>
+            </div>
+            <div class="nav_menu">
+                <br />
+            </div>
+            <div></div>
+            <div class="row">
+                <div class="column">
+                    <img src="images/img.png" />
+                </div>
+                <div class="side">
+                    <h2 style="color: #0c4686">Secure Payment Page</h2>
+                    <div>
+                        <div class="content_column">
+                            <label id="lbl_language"><b>Select Language</b></label>
+                            <br />
+                            <label id="payment">Payment Method</label>
+                            <br />
+                            <label id="description">Description</label>
+                            <br />
+                            <label id="amount">Amount</label>
+                        </div>
+                        <div class="content_side">
+                            <select id="language" name="langugae" style="width: 130px">
+                                <option value="English">English</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Tamil">Tamil</option>
+                                <option value="Telugu">Telugu</option>
+                            </select>
+                            <br />
+                            <label id="visa"><b>Visa</b></label>
+                            <br />
+                            <label id="item"><b>Item Ordered</b></label>
+                            <br />
+                            <label id="amountPay"><b>&euro; 100.00</b></label>
+
+                        </div>
+                        <div class="image_side">
+                            <img src="images/visa.png" height="80" width="80" style="position:center" /><br /><br />
+                        </div>
+                    </div>
+                    <div style="background-color: #fccc9e">
+                        <div style="background-color: #99cc00; color: white">
+                            Card Details
+
+                        </div>
+                        <label style="position:absolute">You must fill in fields marked with *</label>
+                        <div class="form_column">
+                            <br />
+                            <label>* Card Number</label><br />
+                            <label id="securityCode">* <u>Security Code</u></label><br />
+                            <label id="expiryDate">* Expiry Date</label><br />
+                            <label id="name">* Cardholder's Name</label>
+                        </div>
+                        <div class="form_side">
+                            <br />
+                            <input type="text" id="cardNumber" style="width: 250px" maxlength="16" onchange="IsValidCardNumber()" /><label id="errorNumber" style="display:none">Invalid</label><br />
+                            <input type="text" id="ccv" style="width: 60px" maxlength="3" onchange="IsValidCCV()" /><label id="errorCCV" style="display:none">Invalid</label><br />
+                            <select id="month" name="cardMonth" style="width: 50px">
+                                <option value="0"></option>
+                                <option value="1">Jan</option>
+                                <option value="2">Feb</option>
+                                <option value="3">Mar</option>
+                                <option value="4">Apr</option>
+                                <option value="5">Jan</option>
+                                <option value="6">Jun</option>
+                                <option value="7">Jul</option>
+                                <option value="8">Aug</option>
+                                <option value="9">Sep</option>
+                                <option value="10">Oct</option>
+                                <option value="11">Nov</option>
+                                <option value="12">Dec</option>
+                            </select>
+                            <select id="year" name="cardYear" style="width: 55px" onclick="IsValidDate()">
+                                <option value="0"></option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select><label id="errorDate" style="display:none">Invalid</label>
+                            <br />
+                            <input type="text" id="customerName" style="width: 250px" maxlength="25" onchange="IsValidName()" /><label id="errorName" style="display:none;">Invalid</label>
+                        </div>
+                    </div>
+                    <div style="background-color: #fccc9e">
+                        <div style="background-color: #99cc00; color: white">
+                            Cardholder Details
+                        </div>
+
+                        <label style="position:absolute">You must fill in fields marked with *</label>
+                        <div class="form_column">
+                            <br />
+                            <label>* Address 1</label><br />
+                            <label>Address 2</label><br />
+                            <label>Address 3</label><br />
+                            <label>* Town/City</label><br />
+                            <label>Region</label><br />
+                            <label>* Pincode/Zipcode</label><br />
+                            <label>* Country</label><br />
+                            <label>Telephone</label><br />
+                            <label>Fax</label><br />
+                            <label>* Email address</label><br />
+                        </div>
+                        <div class="form_side">
+                            <br />
+                            <input id="address" type="text" style="width: 250px" maxlength="40" onchange="IsValidAddress()" /><label id="errorAddress" style="display:none;">Invalid</label><br />
+                            <input id="irstAddress" type="text" style="width: 250px" maxlength="40" onchange="IsValidFirstAddress()" /><label id="errorFirstAddress" style="display:none;">Invalid</label><br />
+                            <input id="secondAddress" type="text" style="width: 250px" maxlength="40" onchange="IsValidSecondAddress2()" /><label id="errorSecondAddress" style="display:none;">Invalid</label><br />
+                            <input id="town" type="text" style="width: 250px" maxlength="20" onchange="IsValidTown()" /><label id="errorTown" style="display:none">Invalid</label><br />
+                            <input id="region" type="text" style="width: 250px" maxlength="20" onchange="IsValidRegion()" /><label id="errorRegion" style="display:none;">Invalid</label><br />
+                            <input id="zip" type="text" style="width: 130px" maxlength="6" onchange="IsValidZip()" /><label id="errorZip" style="display:none;">Invalid</label><br />
+                            <select id="country" name="country" style="width: 160px" onchange="IsValidCountry()">
+                            	<option value="0">Select Country</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Pakistan">Pakistan</option>
+                                <option value="India">India</option>
+                                <option value="America">America</option>
+                                <option value="SriLanka">SriLanka</option>
+                                <option value="China">China</option>
+                                <option value="Japan">Japan</option>
+                            </select><label id="errorCountry" style="display:none;">Invalid</label>
+                            <br />
+                            <input id="phone" type="text" style="width: 130px" maxlength="10" onchange="IsValidPhone()" /><label id="errorPhone" style="display:none;">Invalid</label><br />
+                            <input id="fax" type="text" style="width: 130px" maxlength="13" onchange="IsValidFax()" /><label id="errorFax" style="display:none;">Invalid</label><br />
+                            <input id="email" type="text" style="width: 250px" maxlength="30" /><br />
+                        </div>
+                    </div>
+                    <div>
+                        <img src="images/startAgain.png" height="25" width="25" /><a href="FlowerShop.html">START AGAIN</a>
+                        <a style="float:right" onclick="Validate()">MAKE PAMENT<input type="image" src="images/gg.png" height="35" width="35" style="float:right" /></a>
+                        <br />
+                        <img src="images/cancel.png" height="25" width="25" /><a href="FlowerShop.html">CANCEL</a>
+                    </div>
+                    <div class="content_footer">
+                        <hr />
+                        <h3>Refunds and Returns</h3>
+                        For more information visit our <u>Refunds and Returns</u>
+                        <p>
+                            <img src="images/pay.png" />
+                            For help with your payment visit the <u>WorldPay Help</u>
+                        </p>
+                    </div>
+                </div>
+                <div class="side2">
+                    <img src="images/question.png" class="question1" />
+                    <img src="images/question.png" class="question" />
+                </div>
+            </div>
+
+            <div></div>
+            <div class="footer">
+                <h2>Thank you for shopping at Flowershop. Have a nice day.</h2>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
